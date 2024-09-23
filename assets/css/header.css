@@ -1,0 +1,48 @@
+header {
+  background: linear-gradient(to right, #ff3e3e, #ffc107);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: transparent;
+  padding: 10px 0;
+}
+
+
+.navbar a {
+  color: white !important;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.navbar a:hover {
+  background-color: #e53935;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.highlight {
+  color: #e53935;
+  font-weight: bold;
+}
+
+.hero-nav__logo {
+  height: 35px;
+}
+
+.hero__content {
+  text-align: initial;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+@media(min-width:992px) {
+  .hero__content {
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+  }
+}

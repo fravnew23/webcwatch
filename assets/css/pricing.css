@@ -1,0 +1,221 @@
+.block-17 {
+  --block-background: white;
+  background: var(--block-background);
+  color: var(--root-text-primary);
+  padding-top: 5.8rem;
+  padding-bottom: 5.8rem;
+}
+
+.block-17__header {
+  padding-bottom: 3.6rem;
+}
+
+.block__title {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.4;
+}
+
+@media(min-width: 992px) {
+  .block__title {
+    font-size: 2.5rem;
+  }
+}
+
+.block__paragraph {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  opacity: .9;
+}
+
+@media(min-width: 768px) {
+  .block-17__paragraph {
+    width: 80%;
+  }
+}
+
+@media(min-width: 992px) {
+  .block-17__paragraph {
+    width: 50%;
+  }
+}
+
+.plan-switch {
+  font-size: 1.2rem;
+  margin-top: 3.6rem;
+}
+
+.plan-switch__type {
+  font-size: .87rem;
+  font-weight: 600;
+  opacity: .9;
+}
+
+.plan-switch__type--selected {
+  color: var(--root-primary);
+  opacity: 1;
+}
+
+.testimonial-card-3 {
+  background: var(--root-primary);
+  color: var(--root-primary-invert);
+  padding: 3.1rem 2.1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-card-3__paragraph {
+  font-size: .87rem;
+  opacity: .9;
+  line-height: 1.7;
+}
+
+.testimonial-card-3__quote-symbol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: var(--root-primary);
+  color: var(--root-primary-invert);
+  font-size: 1.3rem;
+  border: 2px solid white;
+  border-radius: 10rem;
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.person__avatar {
+  padding: 3px;
+  width: 68px;
+  height: 68px;
+  background: white;
+  border-radius: 10rem;
+}
+
+.person__rating {
+  font-size: .75rem;
+  color: #ffe200;
+}
+
+.person__name {
+  font-size: .87rem;
+  font-weight: 600;
+}
+
+.person__info {
+  font-size: .8rem;
+  font-weight: 600;
+  opacity: .8;
+}
+
+.plan-card {
+  padding: 3.5rem 2rem;
+  border: 2px solid var(--root-primary);
+  background: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.discount {
+  transform: scale(1.2);
+}
+
+.discount__old-price {
+  font-size: 1.9rem;
+  text-decoration: line-through;
+  opacity: .7;
+}
+
+.discount__percentage {
+  font-size: .87rem;
+  color: var(--root-primary-invert);
+  background: var(--root-primary);
+  padding: .3rem .9rem;
+  border-radius: 10rem;
+}
+
+.plan-card--recommended {
+  background: var(--root-primary);
+  color: var(--root-primary-invert);
+  padding-top: 5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.plan-card--recommended .btn-primary {
+  background: var(--root-primary-invert);
+  color: var(--root-primary);
+}
+
+.plan-card--recommended .plan-features__icon {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  color: white !important;
+}
+
+@media(min-width: 992px) {
+  .plan-card--recommended {
+    height: calc(100% + 50px);
+    width: calc(100% + 25px);
+    margin-left: -12.5px;
+    margin-top: -25px;
+    padding-bottom: calc(3.5rem + 25px);
+  }
+}
+
+.plan-card__tag {
+  font-size: .75rem;
+  padding: .6rem .8rem;
+  border-bottom-left-radius: .8rem;
+  border-bottom-right-radius: .8rem;
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  width: 40%;
+  margin: auto;
+  background: var(--root-primary);
+  color: var(--root-primary-invert);
+}
+
+.plan-card__name {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.plan-card__price {
+  font-size: 4.3rem;
+  font-weight: 600;
+}
+
+.plan-card__duration {
+  font-size: .87rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.plan-features {
+  text-align: initial;
+  margin: auto;
+}
+
+@media(min-width: 1200px) {
+  .plan-features {
+    width: 60%;
+  }
+}
+
+.plan-features__li {
+  font-size: 1rem;
+  margin-bottom: 1.3rem;
+  display: flex;
+}
+
+.plan-features__li-icon {
+  color: #33c58d;
+  transform: scale(1.5);
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff3e3e, #ffc107);;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            color: #fff4f4;
+            margin-bottom: 20px;
+        }
+        form {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+        input[type="email"],
+        input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input[type="button"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #0B1D26;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input[type="button"]:hover {
+            background-color: #09313e;
+        }
+        /* CSS untuk notifikasi melayang di atas halaman */
+        .notification {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #000000;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            font-size: 16px;
+            z-index: 1000;
+            display: none; /* Awalnya disembunyikan */
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        /* CSS untuk menampilkan notifikasi */
+        .notification.show {
+            display: block;
+            opacity: 1;
+        }
+        /* CSS untuk pesan kesalahan di bawah input */
+        .error-message {
+            color: red;
+            font-size: 12px;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form action="">
+            <input type="email" placeholder="Email" id="username" />
+            <input type="password" placeholder="Password" id="password" />
+            <input type="button" value="Login" id="tombol" />
+        </form>
+        <div class="notification" id="successNotification">Login Berhasil!</div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const tombol = document.querySelector("#tombol");
+            const txtUsername = document.querySelector("#username");
+            const txtPassword = document.querySelector("#password");
+            const successNotification = document.querySelector("#successNotification");
+
+            tombol.addEventListener("click", function (event) {
+                event.preventDefault(); // Mencegah form dari pengiriman otomatis
+
+                const emailValue = txtUsername.value.trim();
+                const passwordValue = txtPassword.value.trim();
+
+                // Menghapus pesan kesalahan sebelumnya
+                clearErrorMessages();
+
+                // Validasi apakah email dan password diisi
+                if (emailValue === "" || passwordValue === "") {
+                    if (emailValue === "") {
+                        displayErrorMessage(txtUsername, "Email tidak boleh kosong");
+                    }
+                    if (passwordValue === "") {
+                        displayErrorMessage(txtPassword, "Password tidak boleh kosong");
+                    }
+                } else if (!isValidEmail(emailValue)) {
+                    displayErrorMessage(txtUsername, "Email tidak valid");
+                } else if (emailValue !== "fravv@gmail.com" && passwordValue !== "okee") {
+                    displayErrorMessage(txtUsername, "Email dan password Anda salah");
+                } else if (emailValue !== "fravv@gmail.com") {
+                    displayErrorMessage(txtUsername, "Email Anda salah");
+                } else if (passwordValue !== "okee") {
+                    displayErrorMessage(txtPassword, "Password Anda salah");
+                } else {
+                    showSuccessNotification();
+                    setTimeout(function () {
+                        window.location.href = "index.html"; // Ganti dengan URL halaman tujuan
+                    }, 2000); // Menunggu 2 detik sebelum melakukan redirect
+                }
+            });
+
+            function displayErrorMessage(inputElement, message) {
+                // Membuat elemen span untuk pesan kesalahan
+                const errorMessage = document.createElement("span");
+                errorMessage.classList.add("error-message");
+                errorMessage.textContent = message;
+
+                // Menyisipkan pesan kesalahan di bawah input
+                inputElement.insertAdjacentElement("afterend", errorMessage);
+            }
+
+            function clearErrorMessages() {
+                // Menghapus semua pesan kesalahan yang ada
+                const errorMessages = document.querySelectorAll(".error-message");
+                errorMessages.forEach(function(message) {
+                    message.remove();
+                });
+            }
+
+            function isValidEmail(email) {
+                // Regular expression untuk validasi format email
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+
+            function showSuccessNotification() {
+                successNotification.classList.add("show");
+                setTimeout(function () {
+                    successNotification.classList.remove("show");
+                }, 2000); // Menyembunyikan notifikasi setelah 2 detik
+            }
+        });
+    </script>
+</body>
+</html>

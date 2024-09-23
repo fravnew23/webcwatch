@@ -1,0 +1,30 @@
+.block-39 {
+  --block-background: #f8f8f8;
+  background: var(--block-background);
+  color: var(--root-text-primary);
+}
+
+.content-block {
+  text-align: initial;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.content-block__title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+@media(min-width: 992px) {
+  .content-block__title {
+    font-size: 1.5rem;
+  }
+}
+
+.content-block__paragraph {
+  font-size: 1rem;
+  opacity: .9;
+  line-height: 1.7;
+}

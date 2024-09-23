@@ -1,0 +1,96 @@
+@import 'header.css';
+@import 'product.css';
+@import 'feature.css';
+@import 'testimonial.css';
+@import 'pricing.css';
+@import 'faq.css';
+@import 'contactus.css';
+@import 'footer.css';
+
+:root {
+  --root-primary: #e01705;
+  --root-primary-invert: #fff;
+  --root-text-primary: #0a1f44;
+  --root-elements-roundness: 10rem;
+  --root-space-between-blocks: 5.3rem;
+  --root-space-between-blocks-small-screens: 3rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.space-between-blocks {
+  padding-top: var(--root-space-between-blocks-small-screens);
+  padding-bottom: var(--root-space-between-blocks-small-screens);
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+}
+
+.block__header {
+  margin-bottom: 4rem;
+}
+
+.block__pre-title {
+  color: var(--root-primary);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.block__title {
+  color: var(--root-text-primary);
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.4;
+}
+
+@media(min-width: 992px) {
+  .block__title {
+    font-size: 2.5rem;
+  }
+}
+
+.block__paragraph {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  opacity: .9;
+}
+
+@media (max-width: 768px) {
+  .navbar-toggler {
+    margin-right: 10px;
+  }
+
+  .container {
+    /* flex-direction: column; */
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .image-section {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .text-section,
+  .image-section {
+    flex: none;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 1.rem;
+  }
+}

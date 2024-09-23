@@ -1,0 +1,75 @@
+.block-20 {
+  --block-background: #f8f8f8;
+  background: var(--block-background);
+  color: var(--root-text-primary);
+}
+
+.testimonial-card-1 {
+  padding: 1.5rem;
+  padding-top: 10rem;
+  margin-top: 58px;
+  margin-bottom: 25px;
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  position: relative;
+  z-index: 0;
+}
+
+.testimonial-card-1__paragraph {
+  font-size: .87rem;
+  opacity: .9;
+  line-height: 1.7;
+}
+
+.testimonial-card-1__quote-symbol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: var(--root-primary);
+  color: var(--root-primary-invert);
+  font-size: 1.3rem;
+  border: 2px solid white;
+  border-radius: 10rem;
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.block-20__person {
+  text-align: center;
+  position: absolute;
+  top: -58px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.block-20__person-avatar {
+  padding: 6px;
+  width: 116px;
+  height: 116px;
+  background: white;
+  border-radius: 10rem;
+  border: solid 2px #eff0f9;
+}
+
+.block-20__person-rating {
+  font-size: .75rem;
+  color: #ffe200;
+}
+
+.block-20__person-name {
+  font-size: .87rem;
+  font-weight: 600;
+}
+
+.block-20__person-info {
+  font-size: .8rem;
+  font-weight: 600;
+  opacity: .6;
+}
